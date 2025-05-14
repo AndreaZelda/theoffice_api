@@ -8,14 +8,14 @@
 import Foundation
 
 struct Oficinista: Identifiable, Codable{
-    let id: String
+    let id: Int
     let name: String
-    let gender: String
-    let marital: String
-    let job: [String]
-    let workplace: [String]
-    let firstAppearance: String
-    let lastAppearance: String
-    let actor: String
-    let episodes: [Episodio]
+    let gender: String?
+    let marital: String?
+    let job: [String]?
+    let workplace: [String]?
+    let firstAppearance: String?
+    let lastAppearance: String?
+    let actor: String?
+    let episodes: [Episodio]?
 }

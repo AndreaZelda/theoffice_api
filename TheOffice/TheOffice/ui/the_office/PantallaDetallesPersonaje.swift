@@ -12,7 +12,20 @@ struct PantallaDetallesPersonaje: View {
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
-        Text("Holaaaa desde detalles")
+        if(controlador.pagina_resultados_personaje != nil){
+            NavigationStack{
+                ScrollView{
+                    HStack{
+                        Text("\(controlador.personaje?.name ?? "Nombrecito")")
+                    }
+                    HStack{
+                        Text("\(controlador.personaje?.gender ?? "Generito")")
+                        Text("\(controlador.personaje?.marital ?? "Enamorade")")
+                        
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -8,8 +8,8 @@
 import Foundation
 
 struct Temporada: Identifiable, Codable{
-    let id: String
+    let id: Int
     let number: Int
-    let startDate: String
-    let endDate: String
+    let startDate: String?
+    let endDate: String?
 }

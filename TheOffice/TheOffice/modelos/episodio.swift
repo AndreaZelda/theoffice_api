@@ -8,13 +8,15 @@
 import Foundation
 
 struct Episodio: Identifiable, Codable {
-    let id: String
+    let id: Int
     let title: String
     let episode: String
-    let seriesEpisodeNumber: Int
-    let airDate: String
-    let season: Temporada
-    let mainCharacters: Oficinista
-    let supportingCharacters: Oficinista
-    let recurringCharacters: Oficinista
+    let seriesEpisodeNumber: Int?
+    let airDate: String?
+    let season: SeasonResumen?
+}
+
+struct SeasonResumen: Codable {
+    let id: Int
+    let number: Int
 }

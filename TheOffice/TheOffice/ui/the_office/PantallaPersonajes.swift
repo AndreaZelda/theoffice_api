@@ -10,6 +10,7 @@ import SwiftUI
 
 struct Personajes: View {
     @Environment (ControladorAplicacion.self) var controlador
+    
     var body: some View {
         if(controlador.pagina_resultados_personaje != nil){
             NavigationStack{
@@ -34,7 +35,9 @@ struct Personajes: View {
                 }
             }
         }
-        Text("Saludos!")
+        else {
+            ProgressView("Cargando personajes...")
+        }
     }
 }
 

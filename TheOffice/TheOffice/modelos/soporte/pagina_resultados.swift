@@ -11,8 +11,8 @@ struct Meta: Codable{
     let isFirstPage: Bool
     let isLastPage: Bool
     let currentPage: Int
-    let previousPage: Int
-    let nextPage: Int
+    let previousPage: Int?
+    let nextPage: Int?
     let pageCount: Int
 }
 

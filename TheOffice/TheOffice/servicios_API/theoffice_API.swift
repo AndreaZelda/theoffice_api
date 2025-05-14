@@ -18,7 +18,7 @@ class TheOfficeAPI: Codable{
         return await descargar(recurso: ubicacion_recurso)
     }
     
-    func descargar_informacion_personaje(id: String) async -> Oficinista? {
+    func descargar_informacion_personaje(id: Int) async -> Oficinista? {
         let ubicacion_recurso = "/characters/\(id)"
         
         return await descargar(recurso: ubicacion_recurso)
@@ -31,32 +31,33 @@ class TheOfficeAPI: Codable{
         return await descargar(recurso: ubicacion_recurso)
     }
     
-    func descargar_informacion_episodio(id: String) async -> Episodio? {
+    func descargar_informacion_episodio(id: Int) async -> Episodio? {
         let ubicacion_recurso = "/episodes/\(id)"
         
         return await descargar(recurso: ubicacion_recurso)
     }
     
     //TEMPORADAS
-    func descargar_pagina_temporadas() async -> PaginaResultadoTemporada? {
+    func descargar_pagina_temporadas() async -> [Temporada]? {
         let ubicacion_recurso = "/seasons"
         
         return await descargar(recurso: ubicacion_recurso)
     }
     
-    func descargar_informacion_temporada(id: String) async -> Temporada? {
+    func descargar_informacion_temporada(id: Int) async -> Temporada? {
         let ubicacion_recurso = "/seasons/\(id)"
         
         return await descargar(recurso: ubicacion_recurso)
     }
     
-    private func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico? {
+    func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico? {
         do {
             guard let url = URL(string: "\(url_base)\(recurso)") else { throw ErroresDeRed.badUrl }
             let (datos, respuesta) = try await URLSession.shared.data(from: url)
             guard let respuesta = respuesta as? HTTPURLResponse else { throw ErroresDeRed.badResponse }
             guard respuesta.statusCode >= 200 && respuesta.statusCode < 300 else { throw ErroresDeRed.badStatus }
             do {
+                print("Intentando decodificar recurso: \(recurso) como \(TipoGenerico.self)")
                 let respuesta_decodificada = try JSONDecoder().decode(TipoGenerico.self, from: datos)
                 return respuesta_decodificada
             }
@@ -79,7 +80,7 @@ class TheOfficeAPI: Codable{
         }
         
         catch ErroresDeRed.fallaAlConvertirLaRespuesta {
-            print("Tienes mal el modelo o la implementacion de este mismo, en dragon ball api")
+            print("Tienes mal el modelo o la implementacion de este mismo, en the office api")
         }
         
         catch ErroresDeRed.invalidRequest {
