@@ -8,7 +8,10 @@
 import Foundation
 import SwiftUI
 
+let personaje_falso = Oficinista(id: 1, name: "Michael", gender: "Male", marital: "Holly", job: nil, workplace: nil, firstAppearance: "Pilot", lastAppearance: "Goodbye Michael", actor: "Steve Carrell", episodes: nil)
+
 struct PantallaDetallesPersonaje: View {
+    let personaje: Oficinista
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
@@ -16,13 +19,37 @@ struct PantallaDetallesPersonaje: View {
             NavigationStack{
                 ScrollView{
                     HStack{
-                        Text("\(controlador.personaje?.name ?? "Nombrecito")")
+                        Text("\(personaje.name ?? "Nombrecito")")
                     }
-                    HStack{
-                        Text("\(controlador.personaje?.gender ?? "Generito")")
-                        Text("\(controlador.personaje?.marital ?? "Enamorade")")
-                        
+                    Text("Genero: \(personaje.gender ?? "N/A")")
+                    Text("Pareja: \(personaje.marital ?? "Soltero")")
+                    
+                    if let trabajos = personaje.job {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Trabajos:")
+                                .bold()
+                            ForEach(trabajos, id: \.self) { trabajo in
+                                Text("• \(trabajo)")
+                            }
+                        }
+                        .padding(.top)
                     }
+
+                    if let lugares = personaje.workplace {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Lugares de trabajo:")
+                                .bold()
+                            ForEach(lugares, id: \.self) { lugar in
+                                Text("• \(lugar)")
+                            }
+                        }
+                        .padding(.top)
+                    }
+                    Text("Primera aparición: \(personaje.firstAppearance ?? "Desconocida")")
+                    Text("Última aparición: \(personaje.lastAppearance ?? "Desconocida")")
+                    Text("Actor: \(personaje.actor ?? "Desconocid@")")
+
+
                 }
             }
         }
@@ -30,6 +57,6 @@ struct PantallaDetallesPersonaje: View {
 }
 
 #Preview {
-    PantallaDetallesPersonaje()
+    PantallaDetallesPersonaje(personaje: personaje_falso)
         .environment(ControladorAplicacion())
 }

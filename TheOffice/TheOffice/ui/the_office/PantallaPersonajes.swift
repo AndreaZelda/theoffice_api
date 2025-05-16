@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Personajes: View {
+    
     @Environment (ControladorAplicacion.self) var controlador
     
     var body: some View {
@@ -21,7 +22,7 @@ struct Personajes: View {
                         }
                         ForEach(controlador.pagina_resultados_personaje!.results){ personaje in
                             NavigationLink {
-                                PantallaDetallesPersonaje()
+                                PantallaDetallesPersonaje(personaje: personaje)
                             } label: {
                                 HStack {
                                     Text("\(personaje.name)")
@@ -41,38 +42,6 @@ struct Personajes: View {
     }
 }
 
-//struct PantallaPersonajes: View {
-//    @Environment(ControladorAplicacion.self) var controlador
-//    
-//    var body: some View {
-//        if(controlador.pagina_resultados_personaje != nil){
-//            NavigationStack{
-//                ScrollView{
-//                    LazyVStack{
-//                        HStack{
-//                            Text("Personajes")
-//                                .padding()
-//                                .font(.largeTitle)
-//                                .bold()
-//                        }
-//                        ForEach(controlador.pagina_resultados_personaje!.results){ personaje in
-//                            NavigationLink {
-//                                PantallaDetallesPersonaje()
-//                            } label: {
-//                                HStack {
-//                                    Text("\(personaje.name)")
-//                                }
-//                            }
-//                            .simultaneousGesture(TapGesture().onEnded({
-//                                controlador.descargar_informacion_personaje(id: personaje.id)
-//                            }))
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
 
 #Preview {
     Personajes()
