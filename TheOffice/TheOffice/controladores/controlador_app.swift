@@ -24,7 +24,7 @@ public class ControladorAplicacion{
     
     //Seccion Temporadas
     var temporadas: [Temporada]? = nil
-    //var pagina_resultados_temporada: PaginaResultadoTemporada? = nil
+    var pagina_resultados_temporada: PaginaResultadoTemporada? = nil
     var temporada: Temporada? = nil
     var temporada_seleccionada: Temporada? = nil
     

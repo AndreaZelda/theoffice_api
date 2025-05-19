@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-let personaje_falso = Oficinista(id: 1, name: "Michael", gender: "Male", marital: "Holly", job: nil, workplace: nil, firstAppearance: "Pilot", lastAppearance: "Goodbye Michael", actor: "Steve Carrell", episodes: nil)
+let personaje_falso = Oficinista(id: 55, name: "Michael", gender: "Male", marital: "Holly", job: nil, workplace: nil, firstAppearance: "Pilot", lastAppearance: "Goodbye Michael", actor: "Steve Carrell", episodes: nil)
 
 struct PantallaDetallesPersonaje: View {
     let personaje: Oficinista
@@ -23,6 +23,7 @@ struct PantallaDetallesPersonaje: View {
                     }
                     Text("Genero: \(personaje.gender ?? "N/A")")
                     Text("Pareja: \(personaje.marital ?? "Soltero")")
+                    Image(imagenes_The_Office[personaje.id] ?? "1_Andy")
                     
                     if let trabajos = personaje.job {
                         VStack(alignment: .leading, spacing: 4) {

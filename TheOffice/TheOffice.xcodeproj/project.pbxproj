@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BEDBE2DDB8DC3008E9AD6 /* PantallaEpisodios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDBD2DDB8DC3008E9AD6 /* PantallaEpisodios.swift */; };
+		FB1BEDC02DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDBF2DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift */; };
+		FB1BEDC22DDB9418008E9AD6 /* PantallaTemporadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */; };
+		FB1BEDC42DDB944A008E9AD6 /* PantallaDetallesTemporada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDC32DDB944A008E9AD6 /* PantallaDetallesTemporada.swift */; };
+		FB43D8D32DDB85FB00E8D4A0 /* referencia_imagenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB43D8D22DDB85FB00E8D4A0 /* referencia_imagenes.swift */; };
 		FBA1AD8C2DD246AB00284D2B /* TheOfficeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1AD8B2DD246AB00284D2B /* TheOfficeApp.swift */; };
 		FBA1AD8E2DD246AB00284D2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1AD8D2DD246AB00284D2B /* ContentView.swift */; };
 		FBA1AD902DD246AB00284D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA1AD8F2DD246AB00284D2B /* Assets.xcassets */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BEDBD2DDB8DC3008E9AD6 /* PantallaEpisodios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaEpisodios.swift; sourceTree = "<group>"; };
+		FB1BEDBF2DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaDetallesEpisodio.swift; sourceTree = "<group>"; };
+		FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaTemporadas.swift; sourceTree = "<group>"; };
+		FB1BEDC32DDB944A008E9AD6 /* PantallaDetallesTemporada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaDetallesTemporada.swift; sourceTree = "<group>"; };
+		FB43D8D22DDB85FB00E8D4A0 /* referencia_imagenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencia_imagenes.swift; sourceTree = "<group>"; };
 		FBA1AD882DD246AB00284D2B /* TheOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA1AD8B2DD246AB00284D2B /* TheOfficeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOfficeApp.swift; sourceTree = "<group>"; };
 		FBA1AD8D2DD246AB00284D2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,10 +127,10 @@
 		FBA1AD9C2DD2470D00284D2B /* modelos */ = {
 			isa = PBXGroup;
 			children = (
-				FBA1AD9E2DD2474000284D2B /* soporte */,
 				FBA1AD9F2DD2479D00284D2B /* episodio.swift */,
 				FBA1ADA12DD2483600284D2B /* personaje.swift */,
 				FBA1ADA32DD248EC00284D2B /* temporada.swift */,
+				FBA1AD9E2DD2474000284D2B /* soporte */,
 			);
 			path = modelos;
 			sourceTree = "<group>";
@@ -130,6 +140,10 @@
 			children = (
 				FBA1ADAD2DD2573B00284D2B /* PantallaPersonajes.swift */,
 				FBA1ADAF2DD259DF00284D2B /* PantallaDetallesPersonaje.swift */,
+				FB1BEDBD2DDB8DC3008E9AD6 /* PantallaEpisodios.swift */,
+				FB1BEDBF2DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift */,
+				FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */,
+				FB1BEDC32DDB944A008E9AD6 /* PantallaDetallesTemporada.swift */,
 			);
 			path = the_office;
 			sourceTree = "<group>";
@@ -138,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA1ADA52DD2498C00284D2B /* pagina_resultados.swift */,
+				FB43D8D22DDB85FB00E8D4A0 /* referencia_imagenes.swift */,
 			);
 			path = soporte;
 			sourceTree = "<group>";
@@ -212,17 +227,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1BEDC02DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift in Sources */,
 				FBA1AD8E2DD246AB00284D2B /* ContentView.swift in Sources */,
+				FB1BEDC42DDB944A008E9AD6 /* PantallaDetallesTemporada.swift in Sources */,
 				FBA1ADA62DD2498C00284D2B /* pagina_resultados.swift in Sources */,
 				FBA1ADAA2DD24F3900284D2B /* errores.swift in Sources */,
 				FBA1ADB02DD259DF00284D2B /* PantallaDetallesPersonaje.swift in Sources */,
 				FBA1ADA82DD24B8800284D2B /* theoffice_API.swift in Sources */,
 				FBA1ADAE2DD2573B00284D2B /* PantallaPersonajes.swift in Sources */,
+				FB43D8D32DDB85FB00E8D4A0 /* referencia_imagenes.swift in Sources */,
 				FBA1ADA22DD2483600284D2B /* personaje.swift in Sources */,
 				FBA1ADA02DD2479D00284D2B /* episodio.swift in Sources */,
 				FBA1ADAC2DD252B000284D2B /* controlador_app.swift in Sources */,
 				FBA1ADA42DD248EC00284D2B /* temporada.swift in Sources */,
 				FBA1AD8C2DD246AB00284D2B /* TheOfficeApp.swift in Sources */,
+				FB1BEDBE2DDB8DC3008E9AD6 /* PantallaEpisodios.swift in Sources */,
+				FB1BEDC22DDB9418008E9AD6 /* PantallaTemporadas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

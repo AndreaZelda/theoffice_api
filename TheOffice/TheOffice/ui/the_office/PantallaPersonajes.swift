@@ -25,6 +25,11 @@ struct Personajes: View {
                                 PantallaDetallesPersonaje(personaje: personaje)
                             } label: {
                                 HStack {
+                                    Image(imagenes_The_Office[personaje.id] ?? "default")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 150, height: 250)
+                                        .frame(maxWidth: .infinity)
                                     Text("\(personaje.name)")
                                 }
                             }
@@ -32,6 +37,11 @@ struct Personajes: View {
                                 controlador.descargar_informacion_personaje(id: personaje.id)
                             }))
                         }
+                        
+                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                        .background(Color.indigo,in:RoundedRectangle(cornerRadius: 14))
+                        .foregroundColor(.white)
+                        .padding()
                     }
                 }
             }
