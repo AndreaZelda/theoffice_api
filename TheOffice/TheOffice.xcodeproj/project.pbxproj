@@ -25,6 +25,7 @@
 		FBA1ADAC2DD252B000284D2B /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1ADAB2DD252B000284D2B /* controlador_app.swift */; };
 		FBA1ADAE2DD2573B00284D2B /* PantallaPersonajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1ADAD2DD2573B00284D2B /* PantallaPersonajes.swift */; };
 		FBA1ADB02DD259DF00284D2B /* PantallaDetallesPersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1ADAF2DD259DF00284D2B /* PantallaDetallesPersonaje.swift */; };
+		FBD95C2A2DDE2E6000A2396B /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD95C292DDE2E6000A2396B /* home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		FBA1ADAB2DD252B000284D2B /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
 		FBA1ADAD2DD2573B00284D2B /* PantallaPersonajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaPersonajes.swift; sourceTree = "<group>"; };
 		FBA1ADAF2DD259DF00284D2B /* PantallaDetallesPersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaDetallesPersonaje.swift; sourceTree = "<group>"; };
+		FBD95C292DDE2E6000A2396B /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				FB1BEDBF2DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift */,
 				FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */,
 				FB1BEDC32DDB944A008E9AD6 /* PantallaDetallesTemporada.swift */,
+				FBD95C292DDE2E6000A2396B /* home.swift */,
 			);
 			path = the_office;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				FB1BEDC02DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift in Sources */,
 				FBA1AD8E2DD246AB00284D2B /* ContentView.swift in Sources */,
 				FB1BEDC42DDB944A008E9AD6 /* PantallaDetallesTemporada.swift in Sources */,
+				FBD95C2A2DDE2E6000A2396B /* home.swift in Sources */,
 				FBA1ADA62DD2498C00284D2B /* pagina_resultados.swift in Sources */,
 				FBA1ADAA2DD24F3900284D2B /* errores.swift in Sources */,
 				FBA1ADB02DD259DF00284D2B /* PantallaDetallesPersonaje.swift in Sources */,

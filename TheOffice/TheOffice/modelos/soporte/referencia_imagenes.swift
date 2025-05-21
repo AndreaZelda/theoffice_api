@@ -94,3 +94,32 @@ let imagenes_The_Office: Dictionary = [
     83: "83_Walter"
 
 ]
+
+let imagenes_temporadas: Dictionary = [
+    0: "0",
+    1: "1",
+    2: "2",
+    3: "3",
+    4: "4",
+    5: "5",
+    6: "6",
+    7: "7",
+    8: "8",
+    9: "9"
+]
+        
+let imagenes_episodios: Dictionary = [
+    0: "default",
+    1: "episodio_1",
+    2: "episodio_2",
+    3: "episodio_3",
+    4: "episodio_4",
+    5: "episodio_5",
+    6: "episodio_6",
+    7: "episodio_7",
+    8: "episodio_8",
+    9: "episodio_9",
+    10: "episodio_10"
+]
+
+

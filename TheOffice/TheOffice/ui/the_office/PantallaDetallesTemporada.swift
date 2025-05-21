@@ -15,18 +15,21 @@ struct PantallaDetallesTemporada: View {
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
-        if(controlador.pagina_resultados_temporada != nil){
-            NavigationStack{
-                ScrollView{
-                    HStack{
-                        Text("Temporada \(temporada.number)")
+        if let temporadas = controlador.temporadas {
+            NavigationStack {
+                ScrollView {
+                    LazyVStack {
+                        VStack {
+                            Text("TEMPORADA \(temporada.number)")
+                            Image(imagenes_temporadas[temporada.id] ?? "0")
+                            Text("Fecha de emisión: \(temporada.startDate ?? "unknown")")
+                            Text("Fecha de finalización: \(temporada.endDate ?? "unknown")")
+                        }
                     }
-                    
-                    Text("Fecha de inicio: \(temporada.startDate ?? "2005")")
-                    Text("Fecha de finalización: \(temporada.endDate ?? "2005")")
-                    
                 }
             }
+        } else {
+            ProgressView("Cargando temporada...")
         }
     }
 }

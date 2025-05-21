@@ -25,6 +25,11 @@ struct Episodios: View {
                                 PantallaDetallesEpisodio(episodio: episodio)
                             } label: {
                                 HStack {
+                                    Image(imagenes_episodios[episodio.id] ?? "default")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 150, height: 250)
+                                        .frame(maxWidth: .infinity)
                                     Text("\(episodio.title)")
                                 }
                             }

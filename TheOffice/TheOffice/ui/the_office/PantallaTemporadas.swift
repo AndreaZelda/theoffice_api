@@ -13,14 +13,14 @@ struct Temporadas: View {
     @Environment (ControladorAplicacion.self) var controlador
     
     var body: some View {
-        if(controlador.pagina_resultados_temporada != nil){
-            NavigationStack{
-                ScrollView{
-                    LazyVStack{
-                        HStack{
+        if let temporadas = controlador.temporadas {
+            NavigationStack {
+                ScrollView {
+                    LazyVStack {
+                        HStack {
                             Text("TEMPORADAS")
                         }
-                        ForEach(controlador.pagina_resultados_temporada!.results){ temporada in
+                        ForEach(temporadas) { temporada in
                             NavigationLink {
                                 PantallaDetallesTemporada(temporada: temporada)
                             } label: {
@@ -28,18 +28,18 @@ struct Temporadas: View {
                                     Text("Temporada \(temporada.number)")
                                 }
                             }
-                            .simultaneousGesture(TapGesture().onEnded({
+                            .simultaneousGesture(TapGesture().onEnded {
                                 controlador.descargar_informacion_temporada(id: temporada.id)
-                            }))
+                            })
                         }
                     }
                 }
             }
-        }
-        else {
+        } else {
             ProgressView("Cargando temporadas...")
         }
     }
+
 }
 
 
