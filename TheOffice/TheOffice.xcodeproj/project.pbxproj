@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB129D5C2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB129D5B2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift */; };
 		FB1BEDBE2DDB8DC3008E9AD6 /* PantallaEpisodios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDBD2DDB8DC3008E9AD6 /* PantallaEpisodios.swift */; };
 		FB1BEDC02DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDBF2DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift */; };
 		FB1BEDC22DDB9418008E9AD6 /* PantallaTemporadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB129D5B2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aplicacion_theoffice.swift; sourceTree = "<group>"; };
 		FB1BEDBD2DDB8DC3008E9AD6 /* PantallaEpisodios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaEpisodios.swift; sourceTree = "<group>"; };
 		FB1BEDBF2DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaDetallesEpisodio.swift; sourceTree = "<group>"; };
 		FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaTemporadas.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */,
 				FB1BEDC32DDB944A008E9AD6 /* PantallaDetallesTemporada.swift */,
 				FBD95C292DDE2E6000A2396B /* home.swift */,
+				FB129D5B2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift */,
 			);
 			path = the_office;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB129D5C2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift in Sources */,
 				FB1BEDC02DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift in Sources */,
 				FBA1AD8E2DD246AB00284D2B /* ContentView.swift in Sources */,
 				FB1BEDC42DDB944A008E9AD6 /* PantallaDetallesTemporada.swift in Sources */,

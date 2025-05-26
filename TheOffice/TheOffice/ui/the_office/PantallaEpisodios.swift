@@ -17,27 +17,41 @@ struct Episodios: View {
             NavigationStack{
                 ScrollView{
                     LazyVStack{
-                        HStack{
-                            Text("EPISODIOS")
-                        }
-                        ForEach(controlador.pagina_resultados_episodio!.results){ episodio in
-                            NavigationLink {
-                                PantallaDetallesEpisodio(episodio: episodio)
-                            } label: {
-                                HStack {
-                                    Image(imagenes_episodios[episodio.id] ?? "default")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 150, height: 250)
-                                        .frame(maxWidth: .infinity)
-                                    Text("\(episodio.title)")
-                                }
+                            HStack{
+                                Text("Episodios")
+                                    .font(.largeTitle)
+                                    .bold()
+                                    .padding(.top)
+                                    .padding(.leading)
+                                Spacer()
                             }
-                            .simultaneousGesture(TapGesture().onEnded({
-                                controlador.descargar_informacion_episodio(id: episodio.id)
-                            }))
+                            ForEach(controlador.pagina_resultados_episodio!.results){ episodio in
+                                NavigationLink {
+                                    PantallaDetallesEpisodio(episodio: episodio)
+                                } label: {
+                                    ZStack(alignment: .bottomLeading){
+                                        Image(imagenes_episodios[episodio.id] ?? "default")
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(height: 180)
+                                            .frame(maxWidth: .infinity)
+                                            .clipped()
+                                        Text("\(episodio.title)")
+                                            .font(.headline)
+                                            .padding(8)
+                                            .background(Color.black.opacity(0.6))
+                                            .foregroundColor(.white)
+                                            .cornerRadius(8)
+                                            .padding([.leading, .bottom], 8)
+                                    }
+                                    .clipShape(RoundedRectangle(cornerRadius: 18))
+                                    .padding(.horizontal)
+                                }
+                                .simultaneousGesture(TapGesture().onEnded({
+                                    controlador.descargar_informacion_episodio(id: episodio.id)
+                                }))
+                            }
                         }
-                    }
                 }
             }
         }

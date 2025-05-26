@@ -19,13 +19,55 @@ struct PantallaDetallesEpisodio: View {
             NavigationStack{
                 ScrollView{
                     HStack{
+                        Image(imagenes_episodios[episodio.id] ?? "default")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: 200)
+                            .frame(maxWidth: .infinity)
+                            .clipped()
+                            .clipShape(RoundedRectangle(cornerRadius: 18))
+                    }
+                    .padding(.horizontal)
+                    
+                    HStack{
                         Text("\(episodio.title ?? "Nombrecito")")
+                            .font(.largeTitle)
+                            .bold()
                     }
                     
-                    Text("Episodio: \(episodio.episode ?? "Episiodito")")
-                    Text("Número de episodio en la serie: \(episodio.seriesEpisodeNumber ?? 1)")
+                    HStack{
+                        VStack{
+                            Text("Episodio: \(episodio.episode ?? "Episiodito")")
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 10)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .background(Color.indigo, in: RoundedRectangle(cornerRadius: 14))
+                        .foregroundColor(.white)
+                        VStack{
+                            Text("\(episodio.airDate ?? "Añito")")
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 10)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .background(Color.indigo, in: RoundedRectangle(cornerRadius: 14))
+                        .foregroundColor(.white)
+                    }
+                    .padding(.horizontal)
+                    HStack{
+                        Text("Número de episodio en la serie: \(episodio.seriesEpisodeNumber ?? 1)")
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 10)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .background(Color.indigo, in: RoundedRectangle(cornerRadius: 14))
+                    .foregroundColor(.white)
+                    .padding(.horizontal)
                     
-                    Text("\(episodio.airDate ?? "Añito")")
+                    
+                    
+                    
+                    
                 }
             }
         }
