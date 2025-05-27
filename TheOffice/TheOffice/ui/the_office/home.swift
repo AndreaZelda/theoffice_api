@@ -11,14 +11,13 @@ import SwiftUI
 struct PantallaInicio: View {
     var body: some View {
         ZStack {
-            // Fondo
             Image("fondotheoffice")
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea()
+                .ignoresSafeArea() // Llena por completo la pantalla
                 .overlay(Color.black.opacity(0.7))
 
-            VStack(spacing: 30) {
+            VStack(spacing: 5) {
                 Spacer()
 
                 Text("Bienvenido a")
@@ -49,7 +48,7 @@ struct PantallaInicio: View {
                         .font(.title)
                         .bold()
                 }
-                .padding(.bottom, 40)
+                .padding(.bottom, 100)
             }
             .padding()
         }

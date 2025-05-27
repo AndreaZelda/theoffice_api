@@ -26,6 +26,7 @@ struct MenuNavegacion: View {
                 .tabItem { Label("Temporadas", systemImage: "play.square.stack.fill") }
             
         }
+        .accentColor(.brown)
     }
 }
 

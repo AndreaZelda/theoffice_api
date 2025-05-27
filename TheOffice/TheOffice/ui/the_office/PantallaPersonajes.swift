@@ -12,6 +12,11 @@ import SwiftUI
 
 struct Personajes: View {
     @Environment(ControladorAplicacion.self) var controlador
+    @State private var girando = false
+    
+    @State private var animateGradient: Bool = false
+    private let startColor: Color = Color("CafeClaro")
+    private let endColor: Color = Color("CafeOscuro")
     
     let columnas = [
         GridItem(.flexible(), spacing: 16),
@@ -23,11 +28,10 @@ struct Personajes: View {
             NavigationStack {
                 ScrollView {
                     VStack(alignment: .leading) {
-                        Text("Personajes")
-                            .font(.largeTitle)
-                            .bold()
+                        Image("titulo_personajes")
+                            .resizable()
+                            .scaledToFill()
                             .padding(.horizontal)
-                            .padding(.top)
                         
                         LazyVGrid(columns: columnas, spacing: 16) {
                             ForEach(personajes) { personaje in
@@ -45,7 +49,7 @@ struct Personajes: View {
                                         Text(personaje.name)
                                             .font(.headline)
                                             .padding(8)
-                                            .background(Color.black.opacity(0.6))
+                                            .background(Color.brown.opacity(0.6))
                                             .foregroundColor(.white)
                                             .cornerRadius(8)
                                             .padding([.leading, .bottom], 8)
@@ -60,9 +64,44 @@ struct Personajes: View {
                         .padding(.horizontal)
                     }
                 }
+                .background{
+                    LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    .edgesIgnoringSafeArea(.all)
+                                    .hueRotation(.degrees(animateGradient ? 45 : 0))
+                                    .onAppear {
+                                        withAnimation(.easeInOut(duration: 3).repeatForever(autoreverses: true)) {
+                                            animateGradient.toggle()
+                                        }
+                                    }
+                }
             }
         } else {
-            ProgressView("Cargando personajes...")
+            VStack {
+                Image("dundie-award")
+                    .resizable()
+                    .frame(width: 80, height: 80)
+                    .rotationEffect(Angle.degrees(girando ? 360 : 0))
+                    .animation(Animation.linear(duration: 1.2).repeatForever(autoreverses: false), value: girando)
+                    .onAppear {
+                        girando = true
+                    }
+
+                Text("Cargando personajes...")
+                    .foregroundColor(.white)
+                    .padding(.top, 12)
+                    .bold()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background{
+                LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                .edgesIgnoringSafeArea(.all)
+                                .hueRotation(.degrees(animateGradient ? 45 : 0))
+                                .onAppear {
+                                    withAnimation(.easeInOut(duration: 3).repeatForever(autoreverses: true)) {
+                                        animateGradient.toggle()
+                                    }
+                                }
+            }
         }
     }
 }
