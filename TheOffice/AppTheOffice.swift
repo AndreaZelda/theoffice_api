@@ -40,6 +40,7 @@ struct Navegacion: View {
                 Temporadas()
             }
             .toolbarBackground(.visible, for: .tabBar)
+            
             .tabItem {
                 Label("Temporadas", systemImage: "play.square.stack.fill")
             }
