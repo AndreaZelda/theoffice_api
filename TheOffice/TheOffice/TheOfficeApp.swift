@@ -13,7 +13,7 @@ struct TheOfficeApp: App {
     @Environment(ControladorAplicacion.self) var controlador
     var body: some Scene {
         WindowGroup {
-            MenuNavegacion()
+            Navegacion()
         }
     }
 }

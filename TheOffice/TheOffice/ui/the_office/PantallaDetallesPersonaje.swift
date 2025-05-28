@@ -34,7 +34,7 @@ struct PantallaDetallesPersonaje: View {
                                                        startPoint: .top,
                                                        endPoint: .bottom)
                         )
-                    Text("\(personaje.name ?? "Nombrecito")")
+                    Text("\(personaje.name ?? "No disponible")")
                         .font(.largeTitle)
                         .bold()
                         .foregroundColor(.white)

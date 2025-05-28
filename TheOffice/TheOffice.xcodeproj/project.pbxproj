@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB129D5C2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB129D5B2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift */; };
 		FB1BEDBE2DDB8DC3008E9AD6 /* PantallaEpisodios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDBD2DDB8DC3008E9AD6 /* PantallaEpisodios.swift */; };
 		FB1BEDC02DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDBF2DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift */; };
 		FB1BEDC22DDB9418008E9AD6 /* PantallaTemporadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */; };
@@ -26,11 +25,11 @@
 		FBA1ADAC2DD252B000284D2B /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1ADAB2DD252B000284D2B /* controlador_app.swift */; };
 		FBA1ADAE2DD2573B00284D2B /* PantallaPersonajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1ADAD2DD2573B00284D2B /* PantallaPersonajes.swift */; };
 		FBA1ADB02DD259DF00284D2B /* PantallaDetallesPersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1ADAF2DD259DF00284D2B /* PantallaDetallesPersonaje.swift */; };
+		FBB5852E2DE766DD007AF747 /* AppTheOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5852D2DE766DD007AF747 /* AppTheOffice.swift */; };
 		FBD95C2A2DDE2E6000A2396B /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD95C292DDE2E6000A2396B /* home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB129D5B2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aplicacion_theoffice.swift; sourceTree = "<group>"; };
 		FB1BEDBD2DDB8DC3008E9AD6 /* PantallaEpisodios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaEpisodios.swift; sourceTree = "<group>"; };
 		FB1BEDBF2DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaDetallesEpisodio.swift; sourceTree = "<group>"; };
 		FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaTemporadas.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		FBA1ADAB2DD252B000284D2B /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
 		FBA1ADAD2DD2573B00284D2B /* PantallaPersonajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaPersonajes.swift; sourceTree = "<group>"; };
 		FBA1ADAF2DD259DF00284D2B /* PantallaDetallesPersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallaDetallesPersonaje.swift; sourceTree = "<group>"; };
+		FBB5852D2DE766DD007AF747 /* AppTheOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheOffice.swift; sourceTree = SOURCE_ROOT; };
 		FBD95C292DDE2E6000A2396B /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +106,7 @@
 		FBA1AD992DD246EA00284D2B /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				FBB5852C2DE766A3007AF747 /* navegacion */,
 				FBA1AD9D2DD2472900284D2B /* the_office */,
 			);
 			path = ui;
@@ -149,7 +150,6 @@
 				FB1BEDC12DDB9418008E9AD6 /* PantallaTemporadas.swift */,
 				FB1BEDC32DDB944A008E9AD6 /* PantallaDetallesTemporada.swift */,
 				FBD95C292DDE2E6000A2396B /* home.swift */,
-				FB129D5B2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift */,
 			);
 			path = the_office;
 			sourceTree = "<group>";
@@ -161,6 +161,14 @@
 				FB43D8D22DDB85FB00E8D4A0 /* referencia_imagenes.swift */,
 			);
 			path = soporte;
+			sourceTree = "<group>";
+		};
+		FBB5852C2DE766A3007AF747 /* navegacion */ = {
+			isa = PBXGroup;
+			children = (
+				FBB5852D2DE766DD007AF747 /* AppTheOffice.swift */,
+			);
+			path = navegacion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,12 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB129D5C2DE4BF3E00FCD9D4 /* aplicacion_theoffice.swift in Sources */,
 				FB1BEDC02DDB8E09008E9AD6 /* PantallaDetallesEpisodio.swift in Sources */,
 				FBA1AD8E2DD246AB00284D2B /* ContentView.swift in Sources */,
 				FB1BEDC42DDB944A008E9AD6 /* PantallaDetallesTemporada.swift in Sources */,
 				FBD95C2A2DDE2E6000A2396B /* home.swift in Sources */,
 				FBA1ADA62DD2498C00284D2B /* pagina_resultados.swift in Sources */,
+				FBB5852E2DE766DD007AF747 /* AppTheOffice.swift in Sources */,
 				FBA1ADAA2DD24F3900284D2B /* errores.swift in Sources */,
 				FBA1ADB02DD259DF00284D2B /* PantallaDetallesPersonaje.swift in Sources */,
 				FBA1ADA82DD24B8800284D2B /* theoffice_API.swift in Sources */,

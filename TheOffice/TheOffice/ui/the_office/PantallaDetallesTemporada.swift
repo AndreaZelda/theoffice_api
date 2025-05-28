@@ -30,7 +30,7 @@ struct PantallaDetallesTemporada: View {
                             Image(imagenes_temporadas[temporada.id] ?? "0")
                                 .resizable()
                                 .scaledToFill()
-                                .frame(height: 550)
+                                .frame(height: 525)
                                 .frame(maxWidth: .infinity)
                                 .clipped()
                                 .mask(
@@ -91,32 +91,32 @@ struct PantallaDetallesTemporada: View {
                 }
             }
         } else {
-            VStack {
-                Image("dundie-award")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .rotationEffect(Angle.degrees(girando ? 360 : 0))
-                    .animation(Animation.linear(duration: 1.2).repeatForever(autoreverses: false), value: girando)
+            ZStack {
+                LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all)
+                    .hueRotation(.degrees(animateGradient ? 45 : 0))
                     .onAppear {
-                        girando = true
+                        withAnimation(.easeInOut(duration: 3).repeatForever(autoreverses: true)) {
+                            animateGradient.toggle()
+                        }
                     }
+                VStack {
+                    Image("dundie-award")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .rotationEffect(Angle.degrees(girando ? 360 : 0))
+                        .animation(.linear(duration: 1.2).repeatForever(autoreverses: false), value: girando)
+                        .onAppear {
+                            girando = true
+                        }
 
-                Text("Cargando temporada...")
-                    .foregroundColor(.white)
-                    .padding(.top, 12)
-                    .bold()
+                    Text("Cargando temporada...")
+                        .foregroundColor(.white)
+                        .padding(.top, 12)
+                        .bold()
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background{
-                LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                .edgesIgnoringSafeArea(.all)
-                                .hueRotation(.degrees(animateGradient ? 45 : 0))
-                                .onAppear {
-                                    withAnimation(.easeInOut(duration: 3).repeatForever(autoreverses: true)) {
-                                        animateGradient.toggle()
-                                    }
-                                }
-            }
         }
     }
 }

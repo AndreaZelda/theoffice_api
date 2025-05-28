@@ -14,6 +14,7 @@ struct Episodio: Identifiable, Codable {
     let seriesEpisodeNumber: Int?
     let airDate: String?
     let season: SeasonResumen?
+    let summary: String
 }
 
 struct SeasonResumen: Codable {
